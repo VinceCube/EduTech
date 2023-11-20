@@ -418,8 +418,137 @@ input[type=submit]:hover {
 hr{
     margin: 10px 0;
 }
+
 @media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo h3 {
+        margin-left: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .home .content {
+        margin-top: 100px;
+    }
+
+    .about,
+    .edutech,
+    .accreditation,
+    .contact,
+    .footer {
+        padding: 20px;
+    }
+
     .row {
         flex-direction: column;
+        margin-top: 0;
     }
-}   
+
+    .col {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    .row .col .left {
+        margin-top: 0;
+    }
+
+    .row .col .left img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .edu-title .lowerside {
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .edutech .row .col a {
+        padding: 10px 20px;
+    }
+
+    .accreditation .row {
+        flex-direction: column;
+    }
+
+    .footer .col1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer .footer_link {
+        justify-content: center;
+    }
+
+    .footer .footer_link img {
+        height: 20px;
+    }
+
+    .last-footer h2 {
+        font-size: 1.2rem;
+    }
+
+    .last-footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    nav ul {
+        gap: 2rem;
+    }
+}
+
+/* Laptops and Desktops */
+@media screen and (min-width: 1025px) {
+    .row {
+        margin-top: -50px;
+    }
+
+    .content img {
+        margin-top: 200px;
+    }
+
+    .about,
+    .edutech,
+    .accreditation,
+    .contact,
+    .footer {
+        padding: 40px 100px;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .col {
+        flex-basis: 48%;
+        margin: 10px;
+    }
+
+    .card {
+        margin: 0 40px;
+    }
+
+    .edu-title .lowerside {
+        margin-bottom: auto;
+    }
+
+    .footer .col1 {
+        width: 25%;
+    }
+}
