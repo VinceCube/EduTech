@@ -465,7 +465,7 @@ hr{
 
     .row .col .left img {
         height: auto;
-        max-width: 300px;
+        max-width: 100%;
     }
 
     .edu-title .lowerside {
