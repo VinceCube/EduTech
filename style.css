@@ -427,9 +427,12 @@ hr{
 }
 
 @media screen and (max-width: 480px){
-label{
-    display: block;
-}
-nav{
-    position: absolute}
+label {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        background-color: #fff;
+    }
 }
