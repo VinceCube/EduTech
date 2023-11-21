@@ -82,15 +82,11 @@ nav ul li a:hover {
 }
 
 video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    max-width: 100%;
+    position: inherit;
     }
 
 .content {
