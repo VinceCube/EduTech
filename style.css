@@ -18,13 +18,10 @@ header {
     justify-content: space-between;
     position: relative;
     border-bottom: 1px #fff solid;
+    z-index: 2;
 }
 .logo, nav ul li a, label{
     color: #fff;
-}
-label{
-    display: none;
-
 }
 .logo{
     margin: 20px;
@@ -50,7 +47,6 @@ label{
     height: auto;
     border-radius: 50%;
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -61,7 +57,7 @@ nav ul li a {
 }
 
 nav ul {
-    display: inline-flex;
+    display: flex;
     gap: 4rem;
     float: right;
 }
@@ -77,7 +73,7 @@ nav ul li:nth-child(4) {
 .home {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: auto;
 }
 
 nav ul li a:hover {
@@ -86,16 +82,12 @@ nav ul li a:hover {
 }
 
 video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-}
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    max-width: 100%;
+    position: inherit;
+    }
 
 .content {
     position: absolute;
@@ -425,11 +417,13 @@ input[type=submit]:hover {
 hr{
     margin: 10px 0;
 }
-input[type=checkbox]{
+
+label{
     display: none;
+
 }
 
-@media screen and (max-width: 480px){
+@media only screen and (max-width: 768px){
 label {
         display: block;
     }
@@ -437,5 +431,214 @@ label {
     nav {
         position: absolute;
         background-color: #fff;
+        top: 10px;
+        right: 10px;
+        width: 150px;
+        padding: 10px;
+        border-radius: 5px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+    nav ul li a, nav label{
+        color: #222;
+    }
+    nav label{
+        text-align: right;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    input:checked ~ nav{
+        visibility: visible;
+        opacity: 1;
+    }
+    video {
+    text-align: center;
+    margin: auto;
+    padding: auto;
+    max-width: 100%;
+    position: inherit;
+    }
+    .content img{
+        width: auto;
+        height: 100px;
+        margin: 20px;
+    }
+    .content h1{
+        font-size: 1.5rem;
+    }
+    .content {
+        width: 100%;
+        top: 28.5%;
+        padding: 250px 0;
+        z-index: 1;
+    }
+    
+    .row {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .col {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+
+    .row .col .left {
+        margin-top: 0;
+    }
+
+    .row .col .left img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .edu-title .lowerside {
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .edutech .row .col a {
+        padding: 10px 20px;
+    }
+
+    .accreditation .row {
+        flex-direction: column;
+    }
+
+    .footer .col1 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer .footer_link {
+        justify-content: center;
+    }
+
+    .footer .footer_link img {
+        height: 20px;
+    }
+
+    .last-footer h2 {
+        font-size: 1.2rem;
+    }
+
+    .last-footer p {
+        font-size: 0.9rem;
+    }
+    .about,
+    .edutech,
+    .accreditation,
+    .contact,
+    .footer {
+        padding: 10px;
+    }
+    .about{
+        padding: 10px;
+        height: auto;
+        position: relative;
+    }
+    .about .about-title{
+        font-size: 1.5rem;
+    }
+    .about .row .col img{
+        width: auto;
+        height: 150px;
+    }
+    .edutech .edu-title{
+        font-size: 1.5rem;
+    }
+    .accreditation .row{
+        padding: 0 100px;
+        margin: auto;
+      }
+      .accreditation .col img{
+        padding: 0 90px;
+        width: auto;
+        margin: auto;
+        height: 100px;
+
+      }
+      .accreditation .col .ched{
+        padding: 0 90px;
+        width: auto;
+        margin: auto;
+        height: 100px;
+      }
+      .contact{
+        padding: 0 100px;
+      }
+      .footer .row{
+        margin: auto;
+      }
+      .footer .row .col1 h3{
+        margin-top: 15px;
+        text-align: center;
+        margin: auto;
+        align-items: center;
+      }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    nav ul {
+        gap: 2rem;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .row {
+        margin-top: -50px;
+    }
+    .content{
+        width: 100%;
+        height: auto;
+        padding: 250px 0;
+        z-index: 1;
+    }
+    .content img {
+        margin-top: 100px;
+    }
+
+    .about,
+    .edutech,
+    .accreditation,
+    .contact,
+    .footer {
+        padding: 20px 80px;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .col {
+        flex-basis: 48%;
+        margin: 10px;
+    }
+    .edutech .row {
+        margin: 0;
+        flex-wrap: nowrap;
+    }
+    .card {
+        margin: 0 40px;
+    }
+
+    .edu-title .lowerside {
+        margin-bottom: auto;
+    }
+    .accreditation .row {
+        margin: 0;
+        flex-wrap: nowrap;
+    }
+    .footer .row {
+        margin: 0;
+        flex-wrap: nowrap;
+    }
+    .footer .col1 {
+        width: 25%;
     }
 }
