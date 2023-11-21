@@ -425,6 +425,9 @@ input[type=submit]:hover {
 hr{
     margin: 10px 0;
 }
+input[type=checkbox]{
+    display: none;
+}
 
 @media screen and (max-width: 480px){
 label {
